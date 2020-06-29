@@ -6,7 +6,7 @@ public enum AccountType {
 	RecurringDepositAccount(" In RD account a fixed amount is deposited every month for a specified period and the total amount is repaid with interest at the end of the particular fixed period."),
 	FixedDepositAccount("It’s one time deposit and one time take away (withdraw) account. The money deposited in this account can not be withdrawn before the expiry of period.");
 	
-	AccountType(String des) {
+	AccountType(String accountDescription) {
 		this.accountDescription = accountDescription;
 	}
 	

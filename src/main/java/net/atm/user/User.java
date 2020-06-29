@@ -77,6 +77,6 @@ public class User {
 	}
 	
 	public String toString() {
-		return "Name: " + this.firstName + this.lastName + "\n" + "Cell no: " + this.cellNo + "\n" +  "Date created: " + this.dateCreated.toString() + "\n" + "Accounts: " + this.userAccounts.toString();
+		return "Name: " + this.firstName  + " " + this.lastName + "\n" + "Cell no: " + this.cellNo + "\n" +  "Date created: " + this.dateCreated.toString() + "\n" + "Accounts: " + this.userAccounts.toString();
 	}
 }
