@@ -49,24 +49,19 @@ public class Account {
 		return dateCreated;
 	}
 	
+	public double getAvailibleBalance() {
+		return availibleBalance;
+	}
 	public ArrayList<Transaction> getTransactions(){
 		return tranactions;
 	}
 	
-	public void setAmount(double amount) {
-		this.availibleBalance = amount;
+	public void changeAmount(double amount) {
+		this.availibleBalance += amount;
 	}
 	
 	public String toString() {
 		return "Name: "  + accountName + "\n" + "Account type: " + type.toString()+ "\n" + "Account num: " + accountNum + "\n" + "Balance: " + availibleBalance + "\n" + "Transactions: " + tranactions.toString() + "\n" +  "Date created: " + dateCreated + "\n" + "Description: " + type.getDescription() ; 
 	}
-	
 }
 
-/*
-Account:
-TypeofAccount 
-String name
-double availibleBalance
-ArrayListTansanction transactions
- */

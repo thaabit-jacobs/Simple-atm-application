@@ -25,12 +25,6 @@ class UserTest {
 	}
 	
 	@Test
-	void shouldReturnTheDateTheUserObjWasCreated() {
-		User u = new User("Thaabit", "Jacobs", "pass0000", 0675007004);
-		assertEquals("2020-06-29", u.getDateCreated().toString());
-	}
-	
-	@Test
 	void shouldReturnInvalidCellnoWhenChangingCellNo() {
 		User u = new User("Thaabit", "Jacobs", "pass0000", 0675007004);
 		assertEquals("Invalid cell phone number", u.changeCellNo(0255));
