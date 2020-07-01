@@ -11,6 +11,8 @@ public class User {
 	
 	private String lastName;
 	
+	private String userName;
+	
 	private String password;
 	
 	private int cellNo;
@@ -24,6 +26,8 @@ public class User {
 		this.firstName = firstName;
 		
 		this.lastName = lastName;
+		
+		this.userName = setUserName();
 		
 		this.password = password;
 		
@@ -40,6 +44,18 @@ public class User {
 	
 	public String getLastName() {
 		return lastName;
+	}
+	
+	public String getUserName() {
+		return userName;
+	}
+	
+	public String getPassword() {
+		return password;
+	}
+	
+	public String setUserName() {
+		return firstName + lastName;
 	}
 	
 	public int getCellNo() {

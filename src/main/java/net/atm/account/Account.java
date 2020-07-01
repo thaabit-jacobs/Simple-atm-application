@@ -52,16 +52,25 @@ public class Account {
 	public double getAvailibleBalance() {
 		return availibleBalance;
 	}
+	
 	public ArrayList<Transaction> getTransactions(){
 		return tranactions;
+	}
+	
+	public void addTransactions(Transaction transaction){
+		tranactions.add(transaction);
 	}
 	
 	public void changeAmount(double amount) {
 		this.availibleBalance += amount;
 	}
 	
-	public String toString() {
+	public String displayAccountDetails() {
 		return "Name: "  + accountName + "\n" + "Account type: " + type.toString()+ "\n" + "Account num: " + accountNum + "\n" + "Balance: " + availibleBalance + "\n" + "Transactions: " + tranactions.toString() + "\n" +  "Date created: " + dateCreated + "\n" + "Description: " + type.getDescription() ; 
+	}
+	
+	public String toString() {
+		return "Name: "  + accountName + "\n" + "Account type: " + type.toString()+ "\n" + "Account num: " + accountNum; 
 	}
 }
 

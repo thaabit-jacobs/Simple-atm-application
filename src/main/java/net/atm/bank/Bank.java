@@ -25,9 +25,3 @@ public class Bank {
 		return bankUsers;
 	}
 }
-
-/*
-Bank:
-String name 
-ArrayListUsers users
-*/

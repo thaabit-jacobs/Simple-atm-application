@@ -38,6 +38,8 @@ public class Transaction {
 		
 		f.close();
 		
+		account.addTransactions(this);
+		
 		return balance;
 	}
 	
@@ -55,6 +57,8 @@ public class Transaction {
 			
 			f.close();
 			
+			account.addTransactions(this);
+			
 			return invalidMsg;
 		}
 		
@@ -65,6 +69,8 @@ public class Transaction {
 		transactionSuccess = true;
 		
 		f.close();
+		
+		account.addTransactions(this);
 		
 		return deposittedMsg;
 	}
@@ -83,6 +89,8 @@ public class Transaction {
 			
 			f.close();
 			
+			account.addTransactions(this);
+			
 			return invalidMsg;
 		}
 		
@@ -93,6 +101,8 @@ public class Transaction {
 		transactionSuccess = true;
 		
 		f.close();
+		
+		account.addTransactions(this);
 		
 		return withdrawalMsg;
 	}
