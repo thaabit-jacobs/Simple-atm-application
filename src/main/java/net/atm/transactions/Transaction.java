@@ -107,12 +107,4 @@ public class Transaction {
 		
 		return receipt;
 	}
-	
-	public static void main(String[] args) {
-		Account acc = new Account("ThaabitsSavings", AccountType.SavingsAccount);
-		Transaction transac = new Transaction(acc);
-		transac.deposit(500);
-		System.out.print(transac.receipt());
-	}
-	
 }
