@@ -38,7 +38,7 @@ public class User {
 		
 		this.userAccounts = new ArrayList<>();
 		
-		this.userAccounts.add(new Account(this.getUserName() +" Savings", AccountType.SavingsAccount));
+		this.userAccounts.add(new Account("Savings", AccountType.SavingsAccount));
 	}
 	
 	public String getFirstName() {
