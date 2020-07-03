@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 import net.atm.account.Account;
+import net.atm.types.AccountType;
 
 public class User {
 	
@@ -36,6 +37,8 @@ public class User {
 		this.dateCreated = LocalDate.now();
 		
 		this.userAccounts = new ArrayList<>();
+		
+		this.userAccounts.add(new Account(this.getUserName() +" Savings", AccountType.SavingsAccount));
 	}
 	
 	public String getFirstName() {
