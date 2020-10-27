@@ -1,5 +1,7 @@
 package net.atm;
 
+import static net.atm.transactions.printer.Printer.*;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
