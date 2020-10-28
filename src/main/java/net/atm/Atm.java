@@ -14,7 +14,7 @@ public class Atm {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		User u1 = new User("Thaabit", "Jacobs", "passwor", 1234567891);
+		User u1 = new User("Thaabit", "Jacobs", "0000", 1234567891);
 		
 		ArrayList<User> userList = new ArrayList<>();
 		userList.add(u1);
