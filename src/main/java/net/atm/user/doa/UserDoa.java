@@ -14,10 +14,12 @@ public interface UserDoa{
 
     @SqlUpdate("insert into users (id, first_name, last_name, password, cell_num, date_created) " +
             "values(:id, :firstName, :lastName, :password, :cellNo, :dateCreated")
-    void insertUser(@Bind("id") int id, @Bind("firstName") String firstName, @Bind("lastName") String lastName, @Bind("password") String password, @Bind("cellNo") int cellNo, @Bind("dateCreated") LocalDate dateCreated);
+    void insertUser(@Bind("id") int id, @Bind("firstName") String firstName, @Bind("lastName") String lastName,
+                    @Bind("password") String password, @Bind("cellNo") int cellNo, @Bind("dateCreated") LocalDate dateCreated);
 
     @SqlUpdate("update users set first_name=:firstName, last_name=:lastName, password=:password, cell_num=:cellNo where id=:id" )
-    void updateUser(@Bind("id") int id, @Bind("firstName") String firstName, @Bind("lastName") String lastName, @Bind("password") String password, @Bind("cellNo") int cellNo);
+    void updateUser(@Bind("id") int id, @Bind("firstName") String firstName, @Bind("lastName") String lastName,
+                    @Bind("password") String password, @Bind("cellNo") int cellNo);
 
     @SqlQuery("select * from users where id=:id")
     User selectUser(@Bind("id") int id);
