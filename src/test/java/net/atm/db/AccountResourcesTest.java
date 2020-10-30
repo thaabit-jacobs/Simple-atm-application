@@ -1,3 +1,4 @@
+/*
 package net.atm.db;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,7 +11,7 @@ import org.junit.jupiter.api.Test;
 
 import net.atm.account.AccountSupport;
 import net.atm.types.AccountType;
-
+/*
 public class AccountResourcesTest {
 
     AccountsResources ar;
@@ -32,5 +33,4 @@ public class AccountResourcesTest {
         assertTrue(ar.addAccount("Savings", AccountType.SavingsAccount, accNum, LocalDate.now()));
         //ar.deleteAccount(accNum);
     }
-    
-}
+    */

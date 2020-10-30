@@ -2,7 +2,7 @@ package net.atm.bank;
 
 import java.util.ArrayList;
 
-import net.atm.user.User;
+import net.atm.user.model.User;
 
 public class Bank {
 

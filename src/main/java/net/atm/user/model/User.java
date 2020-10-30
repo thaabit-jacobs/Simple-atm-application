@@ -1,4 +1,4 @@
-package net.atm.user;
+package net.atm.user.model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -7,12 +7,12 @@ import net.atm.account.Account;
 import net.atm.types.AccountType;
 
 public class User {
+
+	private int id;
 	
 	private String firstName;
 	
 	private String lastName;
-	
-	private String userName;
 	
 	private String password;
 	
@@ -22,13 +22,13 @@ public class User {
 	
 	private ArrayList<Account> userAccounts;
 	
-	public User(String firstName, String lastName, String password, int cellNo) {
+	public User(int id, String firstName, String lastName, String password, int cellNo) {
+
+		this.id = id;
 		
 		this.firstName = firstName;
 		
 		this.lastName = lastName;
-		
-		this.userName = setUserName();
 		
 		this.password = password;
 		
@@ -40,6 +40,10 @@ public class User {
 		
 		this.userAccounts.add(new Account("Savings", AccountType.SavingsAccount));
 	}
+
+	public int getId(){
+		return id;
+	}
 	
 	public String getFirstName() {
 		return firstName;
@@ -49,9 +53,9 @@ public class User {
 		return lastName;
 	}
 	
-	public String getUserName() {
-		return userName;
-	}
+//	public String getUserName() {
+//		return userName;
+//	}
 	
 	public String getPassword() {
 		return password;
@@ -72,7 +76,35 @@ public class User {
 	public ArrayList<Account> getUserAccounts(){
 		return userAccounts;
 	}
-	
+
+	public void setId(int id){
+		this.id = id;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public void setLastName(String lastName){
+		this.lastName = lastName;
+	}
+
+	public void setCellNo(int cellNo) {
+		this.cellNo = cellNo;
+	}
+
+	public void setDateCreated(LocalDate dateCreated) {
+		this.dateCreated = dateCreated;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	//public void setUserName(String userName) {
+	//	this.userName = userName;
+	//}
+
 	public String changeCellNo(int amount) {
 		String s = new Integer(amount).toString();
 		if(s.length() < 10 || s.length() > 10)

@@ -1,20 +1,18 @@
 package net.atm;
 
-import static net.atm.transactions.printer.Printer.*;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
 import net.atm.account.Account;
 import net.atm.bank.Bank;
 import net.atm.transactions.Transaction;
-import net.atm.user.User;
+import net.atm.user.model.User;
 
 public class Atm {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		User u1 = new User("Thaabit", "Jacobs", "0000", 1234567891);
+		User u1 = new User(5, "Thaabit", "Jacobs", "0000", 1234567891);
 		
 		ArrayList<User> userList = new ArrayList<>();
 		userList.add(u1);
