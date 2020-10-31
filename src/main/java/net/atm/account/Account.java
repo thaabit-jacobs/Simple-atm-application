@@ -3,42 +3,41 @@ package net.atm.account;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-import net.atm.transactions.Transaction;
+import net.atm.transactions.model.Transaction;
 import net.atm.types.AccountType;
 
 public class Account {
 	
+	private int id;
+	
 	private String accountName;
 	
-	private AccountType type;
+	private String type;
 	
 	private int accountNum;
 	
 	private LocalDate dateCreated;
 	
-	private double availibleBalance;
+	private double balance;
 	
-	private ArrayList<Transaction> tranactions;
-	
-	public Account(String accountName, AccountType type) {
-		
+	public Account(int id, String accountName, AccountType type) {
+		this.id = id;
 		this.accountName = accountName;
-		
-		this.type = type;
-		
+		this.type = type.toString();
 		this.accountNum = new AccountSupport().generateAccountNum();
-		
 		this.dateCreated = LocalDate.now();
-		
-		this.tranactions = new ArrayList<>();
+	}
+	
+	public int getId() {
+		return id;
 	}
 	
 	public String getAccountName() {
 		return accountName;
 	}
 	
-	public AccountType getAccountType() {
-		return type;
+	public String getAccountType() {
+		return type.toString();
 	}
 	
 	public int getAccountNumber() {
@@ -49,24 +48,24 @@ public class Account {
 		return dateCreated;
 	}
 	
-	public double getAvailibleBalance() {
-		return availibleBalance;
+	public double getBalance() {
+		return balance;
 	}
 	
-	public ArrayList<Transaction> getTransactions(){
-		return tranactions;
+	public void setId(int id) {
+		this.id = id;
 	}
 	
-	public void addTransactions(Transaction transaction){
-		tranactions.add(transaction);
+	public void setAccountName(String accountName) {
+		this.accountName = accountName;
 	}
 	
-	public void changeAmount(double amount) {
-		this.availibleBalance += amount;
+	public void setAccountType(AccountType type) {
+		this.type = type.toString();
 	}
 	
-	public String displayAccountDetails() {
-		return "Name: "  + accountName + "\n" + "Account type: " + type.toString()+ "\n" + "Account num: " + accountNum + "\n" + "Balance: " + availibleBalance + "\n" + "Transactions: " + tranactions.toString() + "\n" +  "Date created: " + dateCreated + "\n" + "Description: " + type.getDescription() ; 
+	public void setAvailibleBalance(double balance) {
+		this.balance = balance;
 	}
 	
 	public String toString() {

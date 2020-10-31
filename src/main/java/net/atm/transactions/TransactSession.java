@@ -1,26 +1,13 @@
 package net.atm.transactions;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
 import java.util.Formatter;
 
 import net.atm.account.Account;
-import net.atm.types.AccountType;
 
-public class Transaction {
-	
-	private Account account;
-	
-	private TransactionType type;
-	
-	private LocalDate date;
-	
-	private boolean transactionSuccess;
-	
-	private double transactionAmount;
-	
-	public Transaction(Account account) {
+public class TransactSession {
+	/*
+	 * 	public Transaction(Account account) {
 		
 		this.account = account;
 		
@@ -106,19 +93,6 @@ public class Transaction {
 		
 		return withdrawalMsg;
 	}
+	*/
 	
-	public String receipt() {
-		DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG);
-		Formatter f = new Formatter();
-
-		String receipt = f.format("Transaction type: %s \nTransanction amount: R%.2f \nTransanction sucess: %b \nDate: %s", type.toString(), transactionAmount, transactionSuccess, formatter.format(date)).toString();
-		
-		f.close();
-		
-		return receipt;
-	}
-
-	public static void main(String[] args){
-		System.out.println(LocalDate.now());
-	}
 }
