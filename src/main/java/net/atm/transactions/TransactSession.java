@@ -1,5 +1,6 @@
 package net.atm.transactions;
 
+import static net.atm.transactions.printer.Printer.*;
 import java.time.LocalDate;
 import java.util.Formatter;
 
@@ -26,7 +27,7 @@ public class TransactSession {
 		f.close();
 		
 		account.addTransactions(this);
-		
+		createReceipt(account, this);
 		return balance;
 	}
 	
@@ -45,7 +46,8 @@ public class TransactSession {
 			f.close();
 			
 			account.addTransactions(this);
-			
+			createReceipt(account, this);
+
 			return invalidMsg;
 		}
 		
@@ -58,7 +60,8 @@ public class TransactSession {
 		f.close();
 		
 		account.addTransactions(this);
-		
+		createReceipt(account, this);
+
 		return deposittedMsg;
 	}
 	
@@ -77,7 +80,8 @@ public class TransactSession {
 			f.close();
 			
 			account.addTransactions(this);
-			
+			createReceipt(account, this);
+
 			return invalidMsg;
 		}
 		
@@ -90,7 +94,8 @@ public class TransactSession {
 		f.close();
 		
 		account.addTransactions(this);
-		
+		createReceipt(account, this);
+
 		return withdrawalMsg;
 	}
 	*/

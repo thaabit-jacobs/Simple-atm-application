@@ -51,4 +51,8 @@ class UserTest {
 		assertEquals("Password successfully changed", u.changePassword("passw"));
 	}
 }
+<<<<<<< HEAD
 */
+=======
+*/
+>>>>>>> 0e469e562752a64657bd8a045d6e664689469522
